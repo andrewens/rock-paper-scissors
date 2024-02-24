@@ -1,11 +1,17 @@
 #include <iostream>
-  
+#include <stdlib.h>
+#include <time.h>
+
 // Driver Code 
 int main() 
 { 
-    std::cout << "Hello world!\n";
-    int x;
-    std::cin >> x;
-    std::cout << "Your number is " << x << "\n";
-    return 0; 
+	srand(time(NULL));
+
+	std::cout << "Hello world!\n";
+
+	int rand_num = std::rand() % 10 + 1;
+	std::cout << "Random number: " << rand_num << "\n";
+
+	return 0; 
 }
+
